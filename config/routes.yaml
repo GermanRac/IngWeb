@@ -1,9 +1,27 @@
 index:
-    path: /user
-    controller: App\Controller\UserController::index
+   path: /
+   controller: App\Controller\MainController::index
 
-# controllers:
-#     resource:
-#         path: ../src/Controller/
-#         namespace: App\Controller\UserController::index
-#     type: attribute
+getUsers:
+   path: /users
+   controller: App\Controller\UserController::getUsers
+
+createUser:
+  path: /user/create
+  controller: App\Controller\UserController::createUser
+
+updateUser:
+  path: /user/update/{id}
+  controller: App\Controller\UserController::updateUser
+
+deleteUser:
+  path: /user/delete/{id}
+  controller: App\Controller\UserController::deleteUser
+
+report_pdf_user:
+  path: /user/report-pdf
+  controller: App\Controller\UserController::getPDF
+
+report_excel_user:
+  path: /user/report-excel
+  controller: App\Controller\UserController::getExcel
